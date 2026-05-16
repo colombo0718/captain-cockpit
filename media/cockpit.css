@@ -1,0 +1,162 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, "Noto Sans TC", -apple-system, sans-serif;
+  background: #0f1419;
+  color: #d4d4d4;
+  padding: 20px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 24px;
+}
+
+.meta {
+  color: #888;
+  font-size: 13px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta b { color: #d4d4d4; }
+
+#refresh-btn {
+  background: #1a1f2e;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+#refresh-btn:hover {
+  background: #38bdf8;
+  color: #0f1419;
+}
+
+main {
+  display: grid;
+  gap: 30px;
+}
+
+section h2 {
+  font-size: 18px;
+  color: #38bdf8;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+  margin: 0 0 12px 0;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section h3 {
+  font-size: 14px;
+  color: #a78bfa;
+  margin: 12px 0 6px 0;
+  font-weight: 600;
+}
+
+.count {
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.agents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 8px;
+}
+
+.agent {
+  display: flex;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #1a1f2e;
+  border-radius: 6px;
+  border-left: 3px solid #38bdf8;
+  transition: background 120ms;
+}
+
+.agent:hover {
+  background: #232938;
+  cursor: pointer;
+}
+
+.agent.dormant {
+  opacity: 0.55;
+  border-left-color: #555;
+}
+
+.emoji {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sid {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  color: #666;
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: normal;
+}
+
+.repo {
+  color: #888;
+  font-size: 12px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+.role {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: #bbb;
+}
+
+.future {
+  color: #fbbf24;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.extra {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.direct {
+  color: #34d399;
+  font-size: 11px;
+  margin-top: 2px;
+}

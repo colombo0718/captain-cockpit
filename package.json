@@ -1,0 +1,53 @@
+{
+  "name": "captain-cockpit",
+  "displayName": "Captain Cockpit",
+  "description": "LL 駕駛艙——讀 matrix-manager 員工名冊、顯示組織樹、Resume / 派工 agent",
+  "version": "0.0.1",
+  "publisher": "leaflune",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colombo0718/captain-cockpit.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "captainCockpit.open",
+        "title": "Captain Cockpit: Open",
+        "category": "Captain Cockpit"
+      },
+      {
+        "command": "captainCockpit.refresh",
+        "title": "Captain Cockpit: Refresh",
+        "category": "Captain Cockpit"
+      }
+    ],
+    "configuration": {
+      "title": "Captain Cockpit",
+      "properties": {
+        "captainCockpit.registerPath": {
+          "type": "string",
+          "default": "",
+          "description": "agents-register.json 完整路徑（空 = 自動搜尋 matrix-manager sibling）"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
