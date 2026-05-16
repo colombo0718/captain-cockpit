@@ -2,7 +2,7 @@
   "name": "captain-cockpit",
   "displayName": "Captain Cockpit",
   "description": "LL 駕駛艙——讀 matrix-manager 員工名冊、顯示組織樹、Resume / 派工 agent",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "leaflune",
   "repository": {
     "type": "git",
@@ -14,7 +14,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onUri"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -48,6 +50,7 @@
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.9.1",
     "typescript": "^5.3.0"
   }
 }
